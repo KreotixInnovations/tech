@@ -485,11 +485,11 @@ img {
   }
 
   .about-details h2 {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .about-details p, .about-details ul {
-    font-size: 0.4rem;
+    font-size: 0.6rem;
   }
 
   .services h1 {
