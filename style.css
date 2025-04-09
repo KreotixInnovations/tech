@@ -522,5 +522,8 @@ img {
   .service-info p {
     order: 3;
   }
+  .contact h3 {
+    font-size:1rem;
+  }
 }
 
