@@ -1,6 +1,7 @@
 /* GENERAL STYLES */
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #011a28, #000000, #021d2c, #000000);
   background-size: 400% 400%;
