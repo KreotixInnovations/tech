@@ -8,6 +8,15 @@ body {
   color: #fff;
   animation: gradientAnimation 30s ease infinite;
   transition: background 0.5s ease-in-out;
+  box-sizing: border-box;
+  
+
+}
+
+html{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @keyframes gradientAnimation {
@@ -115,6 +124,10 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin:0;
+  padding:0;
+  top:0;
+  object-fit:cover;
   position: relative;
   overflow: hidden;
   margin-bottom: 60px;
