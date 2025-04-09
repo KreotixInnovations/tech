@@ -409,10 +409,29 @@ img {
   font-family: 'Poppins', sans-serif;
 }
 
+
 .contact h1 {
   font-size: 3rem;
   animation: fadeIn 2s, flicker 2s infinite alternate;
+  position: relative;
+  display: inline-block; /* To limit the underline to the text width */
 }
+
+.contact h1::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #f2e0ec;
+  transition: width 0.3s ease-in-out;
+}
+
+.contact h1:hover::after {
+  width: 100%;
+}
+
 
 .contact h2 {
   font-size: 2rem;
