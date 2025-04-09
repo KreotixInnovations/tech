@@ -471,11 +471,11 @@ img {
   }
 
   .about-details h2 {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .about-details p, .about-details ul {
-    font-size: 0.6rem;
+    font-size: 0.4rem;
   }
 
   .services h1 {
