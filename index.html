@@ -4,15 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kreotix Innovations</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Raleway:wght@400;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css" />
   <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="kreo.png">
   <!-- Google Fonts: Outfit & Kanit -->
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&family=Outfit:wght@400;600&display=swap" rel="stylesheet">
   <!-- Google Fonts: Comfortaa -->
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Syncopate&family=Anta&family=Overpass&family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
 
 
  
@@ -58,7 +58,23 @@
   <section id="about" class="section about visible">
     <div class="content">
       <h1>About Us</h1>
+      <div class="stats">
+        <div class="stat-item">
+          <span class="counter" data-target="60">0</span>
+          <p>Client Projects</p>
+        </div>
+        <div class="stat-item">
+          <span class="counter" data-target="5">0</span>
+          <p>Countries Served</p>
+        </div>
+        <div class="stat-item">
+          <span class="counter" data-target="3">0</span>
+          <p>Active Agencies</p>
+        </div>
+      </div>
       <div class="about-details">
+        
+        
         <h2>Who We Are</h2>
         <p>At Kreotix Innovations, we believe in innovation-driven excellence. Our team of tech enthusiasts, designers, and engineers work together to bring creative, technological, and practical solutions to individuals, students, businesses, and organizations.</p>
         <h2>Our Mission</h2>
@@ -157,6 +173,9 @@
   <section id="contact" class="section contact">
     <div class="content">
       <h1>Contact Us</h1>
+      <div class="contact-logo">
+        <a href="#home"><img src="logo.png" alt="Kreotix Innovations" /></a>
+      </div>
       <h2>Need a quotation? Want to Join our Team?</h2>
       <h3>Just hit the link – we're open for collaboration!</h3>
   
@@ -166,6 +185,7 @@
         <a href="tel:+919025456907"><i data-lucide="phone"></i></a>
         <a href="https://www.linkedin.com/company/kreotix-innovations/"><i data-lucide="linkedin"></i></a>
       </div>
+      
       
     </div>
   </section>
@@ -178,6 +198,42 @@
   <script>
     lucide.createIcons();
   </script>
+
+<script>
+  const counters = document.querySelectorAll('.counter');
+  const speed = 300; // smaller = faster
+
+  const animateCounters = () => {
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const inc = Math.ceil(target / speed);
+
+        if (count < target) {
+          counter.innerText = count + inc;
+          setTimeout(updateCount, 30);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      updateCount();
+    });
+  };
+
+  let animated = false;
+  window.addEventListener('scroll', () => {
+    const statsSection = document.querySelector('.stats');
+    const sectionPos = statsSection.getBoundingClientRect().top;
+    const screenPos = window.innerHeight / 1.2;
+
+    if (sectionPos < screenPos && !animated) {
+      animateCounters();
+      animated = true;
+    }
+  });
+</script>
+
   
 
 </body>
