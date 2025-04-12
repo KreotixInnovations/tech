@@ -65,7 +65,7 @@ img {
 }
 
 .logo img {
-  height: 50px;
+  height: 70px;
 }
 
 .nav-links {
@@ -189,9 +189,51 @@ img {
 
 /* ABOUT SECTION */
 .about {
-  padding: 5rem 2rem;
+  padding: 8rem 2rem 10rem 2rem;
+  min-height: 130vh;
   text-align: center;
+  background: linear-gradient(135deg, #011019, #000000, #030e15, #000000);
+  background-size: 400% 400%;
+  animation: gradientAnimation 30s ease infinite;
 }
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3rem;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.stat-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px 30px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.stat-item:hover {
+  transform: scale(1.1);
+}
+
+.stat-item .counter {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #552bff;
+  display: block;
+  font-family: 'Michroma', sans-serif;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.stat-item p {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-top: 10px;
+  font-family: 'Anta', sans-serif;
+}
+
 
 .about h1 {
   font-size: 3rem;
@@ -235,7 +277,7 @@ img {
   text-align: center;
   
   font-weight: bold;
-
+  font-family: 'Fira Sans', sans-serif;
   position: relative;
 }
 
@@ -255,11 +297,14 @@ img {
 .about-details h2:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+  
 }
 
 .about-details p, .about-details ul {
   font-size: 1.2rem;
   text-align: center;
+  font-family: 'Raleway', sans-serif;
+  
   
 }
 
@@ -460,6 +505,16 @@ img {
 .social-icons a:hover {
   color: rgb(255, 0, 238);
 }
+.contact-logo {
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-logo img {
+  height: 40px;
+}
 
 /* FOOTER */
 .footer {
@@ -500,7 +555,7 @@ img {
 
   .about h1 {
     font-size: 2rem;
-    animation: none;
+    
   }
 
   .about-details h2 {
@@ -516,7 +571,7 @@ img {
   }
 
   .logo img {
-    height: 30px;
+    height: 50px;
   }
   .service-container {
     flex-direction: column;
@@ -544,5 +599,24 @@ img {
   .contact h3 {
     font-size:0.8rem;
   }
-}
+  .stats {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
 
+  .stat-item {
+    width: 30%;
+    padding: 20px;
+    font-size: 0.7rem;
+  }
+
+  .stat-item .counter {
+    font-size: 2rem;
+  }
+
+  .stat-item p {
+    font-size: 0.7rem;
+  }
+
+}
